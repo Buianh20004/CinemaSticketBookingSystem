@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/config.php';
 
 // Kiểm tra session để biết trạng thái đăng nhập
 $isLoggedIn = isset($_SESSION['username']);
