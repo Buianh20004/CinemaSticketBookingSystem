@@ -14,7 +14,7 @@
 <body>
     <?php
     session_start();
-    require_once 'config.php';
+
     // Kiểm tra trạng thái đăng nhập
     $isLoggedIn = isset($_SESSION['username']);
     $username = $isLoggedIn ? $_SESSION['username'] : '';
