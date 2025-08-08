@@ -1,14 +1,12 @@
 <?php
-$host ="mysql.railway.internal";
-$port ="3306";
-$dbname ="railway";
+$servername = "localhost:3306";
 $username = "root";
-$password ="UuZvKPAzUVLPmzRDJtogxrALcVLabNOw";
+$password = "UuZvKPAzUVLPmzRDJtogxrALcVLabNOw";
+$dbname = "railway";
 
-$conn = new mysqli($host, $username, $password, $dbname, $port);
-
-if ($conn->connect_error) {
-    die(" Kết nối thất bại: " . $conn->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Kết nối database thất bại: " . $e->getMessage());
 }
-?>
-
