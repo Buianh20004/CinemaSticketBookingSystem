@@ -1,12 +1,16 @@
 <?php
-$servername = "localhost:3306";
-$username = "root";
-$password = "";
-$dbname = "cinema_booking";
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$dbname = getenv('DB_NAME');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
 
-try {
-    $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Kết nối database thất bại: " . $e->getMessage());
+$conn = new mysqli($host, $username, $password, $dnname, $port);
+
+//chec connection
+
+if($conn->connect_error){
+    die("ket noi taht bai".$conn->connect_error);
 }
+
+?>
