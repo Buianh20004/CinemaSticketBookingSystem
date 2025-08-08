@@ -8,6 +8,6 @@ $password = getenv("DB_PASSWORD");
 $conn = new mysqli($host, $username, $password, $dbname, $port);
 
 if ($conn->connect_error) {
-    die("❌ Kết nối thất bại: " . $conn->connect_error);
+    die(" Kết nối thất bại: " . $conn->connect_error);
 }
 ?>
