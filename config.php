@@ -1,6 +1,6 @@
 <?php
-$host ="yamanote.proxy.rlwy.net";
-$port ="24989";
+$host ="mysql.railway.internal";
+$port ="3306";
 $dbname ="railway";
 $username = "root";
 $password ="UuZvKPAzUVLPmzRDJtogxrALcVLabNOw";
