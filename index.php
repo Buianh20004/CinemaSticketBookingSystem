@@ -1,3 +1,11 @@
+    <?php
+    session_start();
+
+    // Kiểm tra trạng thái đăng nhập
+    $isLoggedIn = isset($_SESSION['username']);
+    $username = $isLoggedIn ? $_SESSION['username'] : '';
+    $userRole = $isLoggedIn ? $_SESSION['role'] : '';
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +20,7 @@
 </head>
 
 <body>
-    <?php
-    session_start();
 
-    // Kiểm tra trạng thái đăng nhập
-    $isLoggedIn = isset($_SESSION['username']);
-    $username = $isLoggedIn ? $_SESSION['username'] : '';
-    $userRole = $isLoggedIn ? $_SESSION['role'] : '';
-    ?>
 
     <div class="container">
         <marquee>CGV Trần Duy Hưng 1-6-2025 Kỉ niệm 22 năm thành lập tặng free bắp rang bơ và nước khi mua từ 2 vé trở
