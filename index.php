@@ -1,9 +1,10 @@
-    <?php
-    // Kiểm tra trạng thái đăng nhập
-    $isLoggedIn = isset($_SESSION['username']);
-    $username = $isLoggedIn ? $_SESSION['username'] : '';
-    $userRole = $isLoggedIn ? $_SESSION['role'] : '';
-    ?>
+<?php
+session_start();
+// Kiểm tra trạng thái đăng nhập
+$isLoggedIn = isset($_SESSION['username']);
+$username = $isLoggedIn ? $_SESSION['username'] : '';
+$userRole = $isLoggedIn ? $_SESSION['role'] : '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
